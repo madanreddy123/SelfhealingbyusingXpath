@@ -3,6 +3,6 @@ Feature: As a tester, I want to click on a check box to enable it and verify it 
     Given I have a "Chrome" browser
     When I navigate to "https://testzenlabs.ie/"
     Then checkbox named "Home" is not selected
-    When I click the "Home" checkbox
+    When I click the "Privacy Policy" checkbox
 #    Then checkbox named "Home" is selected
     Then I close the browser

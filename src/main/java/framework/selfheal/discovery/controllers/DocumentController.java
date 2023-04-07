@@ -191,16 +191,38 @@ public class DocumentController implements Locate {
 //                }
 //            }
 //            tagElements = dashboardElements;
-        else if (tag.equals(Tag.li)){
+        else if (tag.equals(Tag.li)) {
             tagElements = elements.get("li");
             Elements dashboardElements = new Elements();
             for (Element element : tagElements) {
 //                if (Boolean.parseBoolean(String.valueOf(element.text("Home")))) {
+                dashboardElements.add(element);
+
+            }
+            String tagElements1 = String.valueOf(dashboardElements);
+//            System.out.println("--------------------" + tagElements1);
+        }
+             else if (tag.equals(Tag.a)) {
+            tagElements = elements.get("a");
+            Elements dashboardElements = new Elements();
+            for (Element element : tagElements) {
+//                if (Boolean.parseBoolean(String.valueOf(element.text().contains("Privacy")))) {
                     dashboardElements.add(element);
 
             }
             String tagElements1 = String.valueOf(dashboardElements);
             System.out.println("--------------------" + tagElements1);
+        }
+             else if (tag.equals(Tag.div)){
+                tagElements = elements.get("div");
+                Elements dashboardElements = new Elements();
+                for (Element element : tagElements) {
+//                if (Boolean.parseBoolean(String.valueOf(element.text("Home")))) {
+                    dashboardElements.add(element);
+
+                }
+                String tagElements1 = String.valueOf(dashboardElements);
+//            System.out.println("--------------------" + tagElements1);
 //
         }
 
@@ -219,7 +241,7 @@ public class DocumentController implements Locate {
 
         ExtractedResult result = FuzzySearch.extractOne(matcher, values);
         score = result.getScore();
-        cssSelector = tagElements.get(result.getIndex()).text();
+        cssSelector = tagElements.get(result.getIndex()).cssSelector();
 
         // Fuzzy Search by Label
 
@@ -234,7 +256,7 @@ public class DocumentController implements Locate {
             if (result.getScore() > score) {
                 score = result.getScore();
                 String id = labels.get(result.getIndex()).attr("for");
-                cssSelector = document.attr("id", id).text();
+                cssSelector = document.attr("id", id).cssSelector();
             }
         }
 
@@ -248,7 +270,7 @@ public class DocumentController implements Locate {
             result = FuzzySearch.extractOne(matcher, values);
             if (result.getScore() >= score) {
                 score = result.getScore();
-                cssSelector = tagElements.get(result.getIndex()).text();
+                cssSelector = tagElements.get(result.getIndex()).cssSelector();
             }
         }
         if (cssSelector == null) throw new ElementNotFoundException("Element Not Found: " + tag + "=" + matcher);

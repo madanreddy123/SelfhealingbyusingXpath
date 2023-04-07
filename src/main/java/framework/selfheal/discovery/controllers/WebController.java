@@ -70,13 +70,13 @@ public class WebController implements WebAction, WebQuery {
     @Override
     public void highlight(String locator) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].setAttribute('style', 'background: yellow;');", driver.findElement(By.xpath("//li['"+locator + "']")));
+        js.executeScript("arguments[0].setAttribute('style', 'background: yellow;');", driver.findElement(By.cssSelector(locator)));
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        js.executeScript("arguments[0].setAttribute('style', 'background: white;');", driver.findElement(By.xpath("//li['"+locator + "']")));
+        js.executeScript("arguments[0].setAttribute('style', 'background: white;');", driver.findElement(By.cssSelector(locator)));
     }
 
     @Override
@@ -85,9 +85,14 @@ public class WebController implements WebAction, WebQuery {
         driver.findElement(By.cssSelector(locator)).sendKeys(text);
     }
 
+//    @Override
+//    public void click(String locator) {
+//        driver.findElement(By.xpath("//li['"+locator + "']")).click();
+//    }
+
     @Override
     public void click(String locator) {
-        driver.findElement(By.xpath("//li['"+locator + "']")).click();
+        driver.findElement(By.cssSelector(locator)).click();
     }
 
     @Override
@@ -248,8 +253,8 @@ public class WebController implements WebAction, WebQuery {
         return driver.findElement(By.cssSelector(locator)).isEnabled();
     }
 
-    public boolean isSelected(String locator) {
-        return driver.findElement(By.cssSelector(locator)).isSelected();
+    public boolean isSelected(By locator) {
+        return driver.findElement(locator).isSelected();
     }
 
     @Override

@@ -1,10 +1,14 @@
 package framework.selfheal.discovery;
 
+import org.openqa.selenium.By;
+
 public interface WebAction {
     void inject(String script);
     void highlight(String element);
+//    void highlight(By element);
     void enterText(String element,String text);
     void click(String element);
+//    void click(By element);
     void selectRadio(String element);
     void select(String token, String element) throws ElementNotFoundException;
     void get(String url);
