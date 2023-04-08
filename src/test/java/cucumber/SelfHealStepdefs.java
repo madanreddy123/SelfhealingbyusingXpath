@@ -1,38 +1,60 @@
 package cucumber;
 
+import base.DriverManager;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import framework.selfheal.discovery.*;
 import framework.selfheal.discovery.controllers.DocumentController;
-import framework.selfheal.discovery.controllers.WebController;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import java.io.IOException;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class SelfHealStepdefs {
 
-    private WebAction actions;
-    private WebQuery query;
+
     private Locate doc;
+    WebDriver driver;
+    DriverManager driverManager;
+    public SelfHealStepdefs(DriverManager driverManager){
+        try {
+            this.driverManager=driverManager;
+            driver = driverManager.getDriver();
+//             query = (WebQuery) driver;
+
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+
 
     @Given("I have a {string} browser")
-    public void iHaveABrowser(String browserType) {
-        actions = new WebController(WebAction.Browser.valueOf(browserType));
-        query = (WebQuery) actions;
+    public void iHaveABrowser(String browserType) throws IOException, InterruptedException {
+
+
+//        actions = new WebController(WebAction.Browser.valueOf(browserType));
+//        query = (WebQuery) actions;
     }
 
     @When("I navigate to {string}")
     public void iNavigateTo(String url) {
-        actions.get(url);
-        doc = DocumentController.getInstance(query.getHtml());
+        driver.get(url);
+        doc = DocumentController.getInstance(driverManager.getHtml());
+
+//        actions.get(url);
+//        doc = DocumentController.getInstance(query.getHtml());
     }
 
     @Then("I close the browser")
     public void iCloseTheBrowser() {
-        actions.close();
+        driver.quit();
     }
 
 //    @Then("I enter {string} in the {string} field")
@@ -83,8 +105,9 @@ public class SelfHealStepdefs {
         System.out.println("Toggle " + token + " with locator: " + checkBox);
         By Homebutton = By.xpath("//a[text() = '"+checkBox+"']//parent::li[1]");
 //        By Home = By.xpath("//li[normalize-space() = '"+token+"']");
-        actions.highlight((checkBox));
-        actions.click((checkBox));
+//        actions.highlight((checkBox));
+//        actions.click((checkBox));
+        driver.findElement(By.cssSelector(checkBox)).click();
         Thread.sleep(2000);
     }
 

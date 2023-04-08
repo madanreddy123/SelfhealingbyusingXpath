@@ -1,12 +1,7 @@
-C:\Users\Menugu\Downloads\seleniumcucumber\selfhealing\selfhealing\src\main\java\framework\selfheal\discovery\controllers\AutoDiscover.java
-C:\Users\Menugu\Downloads\seleniumcucumber\selfhealing\selfhealing\src\main\java\framework\selfheal\discovery\WebQuery.java
-C:\Users\Menugu\Downloads\seleniumcucumber\selfhealing\selfhealing\src\main\java\framework\selfheal\discovery\controllers\DocumentController.java
-C:\Users\Menugu\Downloads\seleniumcucumber\selfhealing\selfhealing\src\main\java\framework\selfheal\discovery\controllers\WebElementPredicate.java
-C:\Users\Menugu\Downloads\seleniumcucumber\selfhealing\selfhealing\src\main\java\framework\selfheal\discovery\Tag.java
-C:\Users\Menugu\Downloads\seleniumcucumber\selfhealing\selfhealing\src\main\java\framework\selfheal\discovery\controllers\Attribute.java
-C:\Users\Menugu\Downloads\seleniumcucumber\selfhealing\selfhealing\src\main\java\framework\selfheal\discovery\controllers\WebElementButtonPredicate.java
-C:\Users\Menugu\Downloads\seleniumcucumber\selfhealing\selfhealing\src\main\java\framework\selfheal\discovery\Locate.java
-C:\Users\Menugu\Downloads\seleniumcucumber\selfhealing\selfhealing\src\main\java\framework\selfheal\discovery\controllers\WebController.java
-C:\Users\Menugu\Downloads\seleniumcucumber\selfhealing\selfhealing\src\main\java\framework\selfheal\discovery\WebAction.java
-C:\Users\Menugu\Downloads\seleniumcucumber\selfhealing\selfhealing\src\main\java\framework\selfheal\discovery\ElementNotFoundException.java
-C:\Users\Menugu\Downloads\seleniumcucumber\selfhealing\selfhealing\src\main\java\framework\selfheal\discovery\controllers\WebElementInputPredicate.java
+C:\Users\Menugu\OneDrive - Capgemini\Desktop\xpath\SelfhealingbyusingXpath\src\main\java\framework\selfheal\discovery\controllers\WebElementPredicate.java
+C:\Users\Menugu\OneDrive - Capgemini\Desktop\xpath\SelfhealingbyusingXpath\src\main\java\framework\selfheal\discovery\ElementNotFoundException.java
+C:\Users\Menugu\OneDrive - Capgemini\Desktop\xpath\SelfhealingbyusingXpath\src\main\java\framework\selfheal\discovery\controllers\AutoDiscover.java
+C:\Users\Menugu\OneDrive - Capgemini\Desktop\xpath\SelfhealingbyusingXpath\src\main\java\framework\selfheal\discovery\Tag.java
+C:\Users\Menugu\OneDrive - Capgemini\Desktop\xpath\SelfhealingbyusingXpath\src\main\java\framework\selfheal\discovery\controllers\Attribute.java
+C:\Users\Menugu\OneDrive - Capgemini\Desktop\xpath\SelfhealingbyusingXpath\src\main\java\framework\selfheal\discovery\controllers\DocumentController.java
+C:\Users\Menugu\OneDrive - Capgemini\Desktop\xpath\SelfhealingbyusingXpath\src\main\java\framework\selfheal\discovery\Locate.java

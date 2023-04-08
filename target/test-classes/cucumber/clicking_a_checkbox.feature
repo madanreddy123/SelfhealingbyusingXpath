@@ -5,4 +5,4 @@ Feature: As a tester, I want to click on a check box to enable it and verify it 
     Then checkbox named "Home" is not selected
     When I click the "Privacy Policy" checkbox
 #    Then checkbox named "Home" is selected
-    Then I close the browser
+#    Then I close the browser

@@ -1,0 +1,6 @@
+framework\selfheal\discovery\controllers\WebElementPredicate.class
+framework\selfheal\discovery\ElementNotFoundException.class
+framework\selfheal\discovery\Tag.class
+framework\selfheal\discovery\controllers\Attribute.class
+framework\selfheal\discovery\Locate.class
+framework\selfheal\discovery\controllers\DocumentController.class
